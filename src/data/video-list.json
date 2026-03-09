@@ -1,0 +1,98 @@
+[
+  {
+    "status": true,
+    "video": {
+      "id": "video-001",
+      "title": "video-001-title",
+      "description": "透過簡單的呼吸練習，幫助你放鬆身心、專注當下。適合初學者每日練習。",
+      "youtubeId": "JrCSzAr2UPE",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-002", "title": "video-002-title", "coverImage": "", "youtubeId": "mcVUxwXSkzA" },
+      { "id": "video-003", "title": "video-003-title", "coverImage": "", "youtubeId": "4iBWD4oTEog" },
+      { "id": "video-004", "title": "video-004-title", "coverImage": "", "youtubeId": "1ndFTfw_byo" },
+      { "id": "video-005", "title": "video-005-title", "coverImage": "", "youtubeId": "YAVNRIHoX2I" }
+    ]
+  },
+  {
+    "status": true,
+    "video": {
+      "id": "video-002",
+      "title": "video-002-title",
+      "description": "認識正念的基本概念，學習觀察思緒而不評判。",
+      "youtubeId": "mcVUxwXSkzA",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-001", "title": "video-001-title", "coverImage": "", "youtubeId": "JrCSzAr2UPE" },
+      { "id": "video-003", "title": "video-003-title", "coverImage": "", "youtubeId": "4iBWD4oTEog" },
+      { "id": "video-004", "title": "video-004-title", "coverImage": "", "youtubeId": "1ndFTfw_byo" },
+      { "id": "video-005", "title": "video-005-title", "coverImage": "", "youtubeId": "YAVNRIHoX2I" }
+    ]
+  },
+  {
+    "status": true,
+    "video": {
+      "id": "video-003",
+      "title": "video-003-title",
+      "description": "十五分鐘的語音引導，協助你在睡前釋放壓力、安穩入眠。",
+      "youtubeId": "4iBWD4oTEog",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-001", "title": "靜心入門：十分鐘呼吸練習", "coverImage": "", "youtubeId": "JrCSzAr2UPE" },
+      { "id": "video-002", "title": "video-002-title", "coverImage": "", "youtubeId": "mcVUxwXSkzA" },
+      { "id": "video-004", "title": "video-004-title", "coverImage": "", "youtubeId": "1ndFTfw_byo" },
+      { "id": "video-005", "title": "video-005-title", "coverImage": "", "youtubeId": "YAVNRIHoX2I" }
+    ]
+  },
+  {
+    "status": true,
+    "video": {
+      "id": "video-004",
+      "title": "video-004-title",
+      "description": "逐句講解心經經文，結合生活應用與修行要點。",
+      "youtubeId": "1ndFTfw_byo",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-001", "title": "video-001-title", "coverImage": "", "youtubeId": "JrCSzAr2UPE" },
+      { "id": "video-002", "title": "video-002-title", "coverImage": "", "youtubeId": "mcVUxwXSkzA" },
+      { "id": "video-003", "title": "video-003-title", "coverImage": "", "youtubeId": "4iBWD4oTEog" },
+      { "id": "video-005", "title": "video-005-title", "coverImage": "", "youtubeId": "YAVNRIHoX2I" }
+    ]
+  },
+  {
+    "status": true,
+    "video": {
+      "id": "video-005",
+      "title": "video-005-title",
+      "description": "擷取金剛經核心段落，說明空性與般若的意涵。",
+      "youtubeId": "YAVNRIHoX2I",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-001", "title": "video-001-title", "coverImage": "", "youtubeId": "JrCSzAr2UPE" },
+      { "id": "video-002", "title": "video-002-title", "coverImage": "", "youtubeId": "mcVUxwXSkzA" },
+      { "id": "video-003", "title": "video-003-title", "coverImage": "", "youtubeId": "4iBWD4oTEog" },
+      { "id": "video-004", "title": "video-004-title", "coverImage": "", "youtubeId": "1ndFTfw_byo" }
+    ]
+  },
+  {
+    "status": true,
+    "video": {
+      "id": "video-006",
+      "title": "video-006-title",
+      "description": "整理初學者在修行與靜坐時常有的疑問，並給予簡要說明。",
+      "youtubeId": "ZVCrq08QKKA",
+      "coverImage": ""
+    },
+    "related": [
+      { "id": "video-001", "title": "video-001-title", "coverImage": "", "youtubeId": "JrCSzAr2UPE" },
+      { "id": "video-002", "title": "video-002-title", "coverImage": "", "youtubeId": "mcVUxwXSkzA" },
+      { "id": "video-003", "title": "video-003-title", "coverImage": "", "youtubeId": "4iBWD4oTEog" },
+      { "id": "video-004", "title": "video-004-title", "coverImage": "", "youtubeId": "1ndFTfw_byo" }
+    ]
+  }
+]

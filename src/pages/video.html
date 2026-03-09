@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YDM 影片測試</title>
+    <link rel="stylesheet" href="../../dist/css/main.css" />
+    <style>
+      .library-video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .video-item {
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .video-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .video-item-cover {
+        position: relative;
+        aspect-ratio: 16/9;
+        background: #eee;
+      }
+      .video-item-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .video-item-play-icon {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.3);
+        color: #fff;
+        font-size: 2rem;
+      }
+      .video-item-info {
+        padding: 10px 12px;
+      }
+      .video-item-title {
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <h1 style="margin: 40px 0; text-align: center">YDM影片測試</h1>
+      <p style="text-align: center">
+        <a href="../../index.html">← 返回首頁</a>
+      </p>
+
+      <youtube-modal></youtube-modal>
+
+      <div class="library-main-video-section-content">
+        <div class="library-video-section-list">
+          <div id="video-list-container" class="library-video-grid">
+            <!-- 影片項目由 JS 載入 video-list.json 後渲染 -->
+          </div>
+
+          <div class="load-more-container">
+            <a
+              id="load-more-video"
+              class="base-button-purple"
+              style="display: none"
+            >
+              載入更多 <i class="fa fa-refresh"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Handlebars 模板：影片列表 -->
+    <script id="video-item-template" type="text/x-handlebars-template">
+      {{#each videos}}
+      <div class="video-item" data-id="{{id}}">
+        <div class="video-item-cover">
+          <img src="{{#if coverImage}}{{coverImage}}{{else}}/web/res/zh_TW/MSITE_3/images/default.jpg{{/if}}"
+              alt="{{title}}"
+              onerror="this.onerror=null;this.src='/web/res/zh_TW/MSITE_3/images/default.jpg';">
+          <div class="video-item-play-icon">
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+        <div class="video-item-info">
+          <h3 class="video-item-title">{{title}}</h3>
+        </div>
+      </div>
+      {{/each}}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script
+      type="module"
+      src="../../youtube-modal-test/js/youtube-modal-component.js"
+    ></script>
+    <script src="../js/video.js"></script>
+  </body>
+</html>

@@ -61,7 +61,7 @@ function recalculateShelfGrid(container) {
 
 async function loadBookList() {
     try {
-        const response = await fetch('./src/data/book-list.json');
+        const response = await fetch('../data/book-list.json');
         if (!response.ok) throw new Error('無法載入書本資料');
 
         const books          = await response.json();

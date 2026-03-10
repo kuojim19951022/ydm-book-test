@@ -1,50 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YDM 經書測試</title>
-    <link rel="stylesheet" href="../../dist/css/main.css">
-</head>
-<body>
-<div class="">
-    <h1 style="margin:40px 0; text-align: center;">YDM經書測試</h1>
-    <p style="text-align: center;"><a href="../../index.html">← 返回首頁</a></p>
+    <link rel="stylesheet" href="../../dist/css/main.css" />
+  </head>
+  <body>
+    <div class="">
+      <h1 style="margin: 40px 0; text-align: center">YDM經書測試</h1>
+      <p style="text-align: center">
+        <a href="../../index.html">← 返回首頁</a>
+      </p>
 
-    <div class="book-grid-container">
-        <div class="bookshelf-top-item"></div>
+      <div class="bookshelf-top-item" aria-hidden="true"></div>
+      <div class="book-grid-container">
         <!-- 書本項目 -->
+      </div>
+
+      <div class="load-more-container">
+        <a
+          id="load-more-book"
+          class="base-button-purple"
+          data-offset="18"
+          style="display: none"
+        >
+          載入更多 <i class="fa fa-refresh"></i>
+        </a>
+      </div>
     </div>
-</div>
 
     <!-- Handlebars 模板 -->
     <script id="book-item-template" type="text/x-handlebars-template">
-        {{#each books}}
-        <div class="book-item" data-id="{{id}}">
-            <div class="book-item-info">
-                <h3 class="book-item-title">{{title}}</h3>
-            </div>
-            <div class="book-item-cover{{#unless coverImage}} is-default{{/unless}}">
-                <img src="{{#if coverImage}}{{coverImage}}{{else}}/web/res/zh_TW/MSITE_3/images/default.jpg{{/if}}" 
-                    alt="{{title}}" 
-                    onerror="this.onerror=null;this.src='/web/res/zh_TW/MSITE_3/images/default.jpg';this.closest('.book-item-cover').classList.add('is-default');">
-                <div class="book-item-overlay">
-                    <div class="book-item-buttons">
-                        <a href="libraryBook?id={{id}}" target="_blank" class="book-btn" title="線上閱讀">
-                            <i class="far fa-eye"></i>閱讀
-                        </a>
-                        <a href="/api/libraryBook/downloadBook?id={{id}}" class="book-btn book-btn-download" data-pdf-url="{{pdfUrl}}" title="下載PDF">
-                            <i class="fa fa-download"></i>下載
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
+      {{#each books}}
+      <div class="book-item" data-id="{{id}}">
+          <div class="book-item-info">
+              <h3 class="book-item-title">{{title}}</h3>
+          </div>
+          <div class="book-item-cover{{#unless coverImage}} is-default{{/unless}}">
+              <img src="{{coverImage}}" alt="{{title}}">
+              <div class="book-item-overlay">
+                  <div class="book-item-buttons">
+                      <a href="libraryBook?id={{id}}" target="_blank" class="book-btn" title="線上閱讀">
+                          <i class="far fa-eye"></i>閱讀
+                      </a>
+                      <a href="/api/libraryBook/downloadBook?id={{id}}" class="book-btn book-btn-download" data-pdf-url="{{pdfUrl}}" title="下載PDF">
+                          <i class="fa fa-download"></i>下載
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {{/each}}
     </script>
-    
+
     <!-- Handlebars.js 模板引擎 -->
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
     <script src="../js/book.js"></script>
-</body>
+  </body>
 </html>
